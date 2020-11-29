@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:sweet="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.2"
+                android:shadowColor="@color/background"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="4"
+                android:text="LOGIN HERE"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Username"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                sweet:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Password"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                sweet:counterEnabled="true"
+                sweet:counterMaxLength="15"
+                sweet:errorEnabled="true"
+                sweet:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/RememberMe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Remember me" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="LOGIN"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+</layout>
